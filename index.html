@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Universe Explorer 3D</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="hud">
+    <div class="brand">
+      <div class="eyebrow">DEEP SPACE EXPLORATION</div>
+      <h1>UNIVERSE <span>EXPLORER</span></h1>
+      <div id="status">Preparando motores...</div>
+    </div>
+    <div class="mission">
+      <div class="mission-label">SISTEMA</div>
+      <strong id="sector">Setor Sol</strong>
+      <small id="distance">Distância: 0 u</small>
+    </div>
+    <div class="hint">Arraste para olhar · Use os controles para pilotar</div>
+  </div>
+
+  <div id="centerMessage">
+    <div class="crosshair"></div>
+    <div id="nearby">Exploração livre</div>
+  </div>
+
+  <div id="controls" aria-label="Controles da nave">
+    <div class="move-pad">
+      <button class="ctrl up" data-control="forward" aria-label="Avançar">▲</button>
+      <button class="ctrl left" data-control="left" aria-label="Virar à esquerda">◀</button>
+      <button class="ctrl down" data-control="back" aria-label="Recuar">▼</button>
+      <button class="ctrl right" data-control="right" aria-label="Virar à direita">▶</button>
+    </div>
+    <div class="flight-pad">
+      <button class="ctrl tall" data-control="up" aria-label="Subir">ALT +</button>
+      <button class="ctrl tall" data-control="down" aria-label="Descer">ALT −</button>
+      <button class="boost" data-control="boost">BOOST <span>»</span></button>
+    </div>
+  </div>
+  <div id="loading"><div class="loader"></div><strong>ABRINDO O UNIVERSO</strong><span>Gerando estrelas e sistemas...</span></div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
